@@ -7,7 +7,14 @@
       body {
         background: #f5f5f5;
         font-family: 'Roboto', sans-serif;
+        text-align:center;
+        display:flex;
+        min-height:100vh;
       }
+        .wrapper {
+        display:block;
+        margin:auto;
+        }
       .orderNotif * {
         margin: 0;
         padding: 0;
@@ -140,8 +147,10 @@
 </head>
 
 <body>
-    <h1>LIVE Sales - Static Widget</h1>
-    <p style='opacity:.6;'><i>Wait for a moment...</i></p>
+    <div class='wrapper'>
+        <h1>LIVE Sales - Static Widget</h1>
+        <p style='opacity:.6;'><i>Wait for a moment...</i></p>
+    </div>
     <div class='orderNotif'></div>
     <script type="text/javascript">
       //<![CDATA[
