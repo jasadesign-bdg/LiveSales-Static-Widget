@@ -2,11 +2,11 @@
 <html>
 
 <head>
-    <meta content='width=device-width, initial-scale=1' name='viewport'/>
-    <meta charset='utf-8'/>
+    <meta content='width=device-width, initial-scale=1' name='viewport' />
+    <meta charset='utf-8' />
     <title>Live Sales - Static Widget</title>
     <style type="text/css">
-        * {
+    * {
         margin: 0;
         padding: 0;
         outline: none !important;
@@ -17,20 +17,23 @@
         -o-box-sizing: border-box;
         word-wrap: break-word;
         -webkit-font-smoothing: subpixel-antialiased;
-      }
-      body {
+    }
+
+    body {
         background: #f5f5f5;
         font-family: 'Roboto', sans-serif;
-        display:flex;
-        min-height:100vh;
-      }
-        .wrapperInfo {
-        max-width:80%;
-        display:block;
-        margin:auto;
-        text-align:center;
-        }
-      .orderNotif * {
+        display: flex;
+        min-height: 100vh;
+    }
+
+    .wrapperInfo {
+        max-width: 80%;
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+
+    .liveSales_widget * {
         margin: 0;
         padding: 0;
         outline: none !important;
@@ -41,35 +44,40 @@
         -o-box-sizing: border-box;
         word-wrap: break-word;
         -webkit-font-smoothing: subpixel-antialiased;
-      }
-      .orderNotif {
+    }
+
+    .liveSales_widget {
         font-family: 'Roboto', sans-serif;
         font-size: 14px;
         line-height: 1.4;
-      }
-      .orderNotif a {
+    }
+
+    .liveSales_widget a {
         text-decoration: none;
-      }
-      .orderNotif .item {
+    }
+
+    .liveSales_widget .item {
         position: fixed;
         bottom: 0;
         left: 0;
         z-index: 300;
         max-width: 300px;
         font-size: 95%;
-        background: rgba(255,255,255,.95);
+        background: rgba(255, 255, 255, .95);
         padding: 15px 20px;
         border-radius: 6px;
-        box-shadow: 0 10px 20px rgba(0,0,0,.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
         color: #888;
         transition: .4s;
         opacity: 0;
         visibility: hidden;
-      }
-      .orderNotif .item:hover {
+    }
+
+    .liveSales_widget .item:hover {
         background: #fff;
-      }
-      .orderNotif .item span.avatarURL {
+    }
+
+    .liveSales_widget .item span.avatarURL {
         background: #fafafa url(//lh3.googleusercontent.com/-QlJpOYV6yF4/XNEPty8zjJI/AAAAAAAAF6k/7RaA8suy7AsVhOYwcP6WLMf2qc54GUXWwCEwYBhgL/h60/ava.png) no-repeat center center;
         background-size: cover;
         display: block;
@@ -80,33 +88,38 @@
         line-height: 1;
         float: left;
         margin-bottom: 10px;
-      }
-      .orderNotif .item.active {
+    }
+
+    .liveSales_widget .item.active {
         left: 20px;
         bottom: 20px;
         opacity: 1;
         visibility: visible;
-      }
-      .orderNotif .item.hidden {
-        left: -40px!important;
-        opacity: 0!important;
-        visibility: hidden!important;
-      }
-      @media only screen and (max-width: 1068px) {
-        .orderNotif .item.active {
-          bottom: 15px;
-          left: 15px;
-          max-width: 290px;
+    }
+
+    .liveSales_widget .item.hidden {
+        left: -40px !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+
+    @media only screen and (max-width: 1068px) {
+        .liveSales_widget .item.active {
+            bottom: 15px;
+            left: 15px;
+            max-width: 290px;
         }
-      }
-      .orderNotif .item i {
+    }
+
+    .liveSales_widget .item i {
         display: inline-block;
         vertical-align: middle;
         font-size: 200%;
         margin-right: 5px;
         color: #4285F4;
-      }
-      .orderNotif .item h5 {
+    }
+
+    .liveSales_widget .item h5 {
         display: inline-block;
         float: right;
         margin-top: -15px;
@@ -116,8 +129,9 @@
         overflow: hidden;
         margin-left: 10px;
         margin-bottom: 10px;
-      }
-      .orderNotif .item h5 a {
+    }
+
+    .liveSales_widget .item h5 a {
         display: inline-block;
         vertical-align: middle;
         padding: 5px 10px;
@@ -125,39 +139,46 @@
         border-radius: 0 0 0 6px;
         border-top: 0;
         border-right: 0;
-      }
-      .orderNotif .item h5 a:active {
+    }
+
+    .liveSales_widget .item h5 a:active {
         background: #fafafa;
-      }
-      .orderNotif .item h5 a i {
+    }
+
+    .liveSales_widget .item h5 a i {
         display: inline-block;
         vertical-align: middle;
         font-size: 150%;
         margin: 0 5px;
         color: #4E5665;
-      }
-      .orderNotif .item h5 a:hover i {
+    }
+
+    .liveSales_widget .item h5 a:hover i {
         color: #4285F4;
-      }
-      .orderNotif .item .infoOrder b {
+    }
+
+    .liveSales_widget .item .infoOrder b {
         font-weight: 600;
         color: #4E5665;
-      }
-      .orderNotif .item .infoOrder a {
+    }
+
+    .liveSales_widget .item .infoOrder a {
         color: #4285F4;
-      }
-      .orderNotif .item .infoOrder small {
+    }
+
+    .liveSales_widget .item .infoOrder small {
         display: block;
         margin-top: 10px;
-      }
-      .orderNotif .item .infoOrder small a {
+    }
+
+    .liveSales_widget .item .infoOrder small a {
         display: inline-block;
         vertical-align: middle;
         padding-left: 15px;
         border-left: .5px solid #eee;
         float: right;
         color: #888;
-      }
+    }
     </style>
 </head>
 
@@ -166,35 +187,34 @@
         <h1>LIVE Sales - Static Widget</h1>
         <p style='opacity:.6;'><i>Wait for a moment...</i></p>
     </div>
-    <div class='orderNotif'></div>
+    <div class='liveSales_widget'></div>
     <script type="text/javascript">
-      //<![CDATA[
-      var dataOrder = {
-          "Heri M. Ridwan": {
-              "screenshotURL": "https://lh3.googleusercontent.com/u/0/d/1owCPx0Ky1hmxoozoMtJzhPkCHTNR2ZYi=w500",
-              "avatarURL": "https://i.ibb.co/kQ1vzRs/image.png",
-              "time": "2019-05-23",
-              "template": "TOKO WhatsApp - Premium Blogger Template",
-              "templateURL": "https://www.seotemplate.web.id/2019/05/toko-whatsapp-premium-blogger-template.html",
-          },
-          "Abdi": {
-              "screenshotURL": "https://lh3.googleusercontent.com/u/0/d/12E_fombsKq9W7NopNsptGhhQxxDssk_8=w500",
-              "avatarURL": "https://i.ibb.co/Y2Dz1Gx/image.png",
-              "time": "2019-05-23",
-              "template": "TOKO WhatsApp - Premium Blogger Template",
-              "templateURL": "https://www.seotemplate.web.id/2019/05/toko-whatsapp-premium-blogger-template.html",
-          },
-          "Taufik IndoTema": {
-              "screenshotURL": "https://lh3.googleusercontent.com/u/0/d/1eb5b7YUM32Cs0UDfN3h6fiMq6c1Ig6Tz=w500",
-              "avatarURL": "https://i.ibb.co/Ptn8FwY/image.png",
-              "time": "2019-05-23",
-              "template": "TOKO WhatsApp - Premium Blogger Template",
-              "templateURL": "https://www.seotemplate.web.id/2019/05/toko-whatsapp-premium-blogger-template.html",
-          },
-      };
-      //]]>
+    //<![CDATA[
+    var dataSales = {
+        "Heri M. Ridwan": {
+            "screenshotURL": "https://lh3.googleusercontent.com/u/0/d/1owCPx0Ky1hmxoozoMtJzhPkCHTNR2ZYi=w500",
+            "avatarURL": "https://i.ibb.co/kQ1vzRs/image.png",
+            "time": "2019-05-23",
+            "productName": "TOKO WhatsApp - Premium Blogger Template",
+            "productURL": "https://www.seotemplate.web.id/2019/05/toko-whatsapp-premium-blogger-template.html",
+        },
+        "Abdi": {
+            "screenshotURL": "https://lh3.googleusercontent.com/u/0/d/12E_fombsKq9W7NopNsptGhhQxxDssk_8=w500",
+            "avatarURL": "https://i.ibb.co/Y2Dz1Gx/image.png",
+            "time": "2019-05-23",
+            "productName": "TOKO WhatsApp - Premium Blogger Template",
+            "productURL": "https://www.seotemplate.web.id/2019/05/toko-whatsapp-premium-blogger-template.html",
+        },
+        "Taufik IndoTema": {
+            "screenshotURL": "https://lh3.googleusercontent.com/u/0/d/1eb5b7YUM32Cs0UDfN3h6fiMq6c1Ig6Tz=w500",
+            "avatarURL": "https://i.ibb.co/Ptn8FwY/image.png",
+            "time": "2019-05-23",
+            "productName": "TOKO WhatsApp - Premium Blogger Template",
+            "productURL": "https://www.seotemplate.web.id/2019/05/toko-whatsapp-premium-blogger-template.html",
+        },
+    };
+    //]]>
     </script>
-
     <script type="text/javascript" src="https://jasadesign-bdg.github.io/LiveSales-Static-Widget/livesales.js"></script>
 </body>
 
